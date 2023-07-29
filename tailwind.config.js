@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         'bebas-neue': ['Bebas Neue', 'sans-serif'],
         'audiowide': ['Audiowide', 'sans-serif'],
+        'righteous': ['Righteous', 'sans-serif']
       },
     },
   },

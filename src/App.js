@@ -1,24 +1,15 @@
+import { useState } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import About from './pages/About';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
 
 function App() {
+  const [scrollTo, setScrollTo] = useState()
   return (
     <div className="bg-[url('./backgroundForPw.png')] bg-cover bg-center h-screen">
-      <div className='bg-teal-500 bg-opacity-[32%] min-h-screen'>
-        <Router>
-          <Navbar />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/projects' element={<Projects />} />
-            <Route path='/contact' element={<Contact />} />
-          </Routes>
-        </Router>
+      <div className='bg-purple-500 bg-opacity-[32%] min-h-screen'>
+        <Navbar setScrollTo={setScrollTo} scrollTo={scrollTo} />
+        <Home setScrollTo={setScrollTo} scrollTo={scrollTo} />
       </div>
     </div>
   );
