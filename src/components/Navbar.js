@@ -1,5 +1,6 @@
 import React from "react";
 import profpic from '../images/profpic.png'
+import {AiFillLinkedin, AiFillGithub} from 'react-icons/ai'
 
 function Navbar({setScrollTo}){
     return(
@@ -25,6 +26,12 @@ function Navbar({setScrollTo}){
                 <button className="mx-5 drop-shadow-lg" onClick={()=>setScrollTo('contact')}>
                     Contact
                 </button>
+                <a href="https://www.linkedin.com/in/christopher-ho-ken-wong/" className=" flex items-center mx-5 mb-1">
+                    <AiFillLinkedin size={27} />
+                </a>
+                <a href="https://www.github.com/cwongah" className="flex items-center mb-1 ml-5">
+                    <AiFillGithub size={28} />
+                </a>
             </div>
         </div>
     )
