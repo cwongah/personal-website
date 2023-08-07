@@ -7,7 +7,7 @@ function App() {
   const [scrollTo, setScrollTo] = useState()
   return (
     <div className="bg-[url('./backgroundForPw.png')] bg-cover bg-center h-screen">
-      <img src='./backgroundForPw.png' />
+      <img src='./backgroundForPw.png' alt='bgImage' />
       <div className='bg-purple-500 bg-opacity-[32%] min-h-screen'>
         <Navbar setScrollTo={setScrollTo} scrollTo={scrollTo} />
         <Home setScrollTo={setScrollTo} scrollTo={scrollTo} />

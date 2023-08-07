@@ -13,6 +13,7 @@ import pythonLogo from '../images/pythonLogo.png'
 import taskHarmony from '../images/taskHarmony.png'
 import questKeeper from '../images/questKeeper.png'
 import Carousel from "../components/Carousel";
+import { addMessage } from "../firebase/firestore";
 
 function Home({scrollTo, setScrollTo}){
     const [name, setName] = useState('')
@@ -33,6 +34,7 @@ function Home({scrollTo, setScrollTo}){
 
     function handleSubmit(e){
         e.preventDefault()
+        addMessage(name, email, message)
         setName('')
         setEmail('')
         setMessage('')
@@ -95,7 +97,7 @@ function Home({scrollTo, setScrollTo}){
                                         I was previously in the <span className="font-extrabold">Pharmacy</span> industry, having earned my <span className="font-extrabold">Doctorate of Pharmacy</span>. I have since set my sights onto the world of software engineering after completing a program at <span className="font-extrabold">Flatiron School</span>.
                                     </div>
                                     <div className="mt-5">
-                                        I am eager to connect for <span className="font-extrabold">Job</span> opportunities, where I can contribute, collaborate, and learn. If you are interested or have any opportunities that align with my skillset, feel free to <span className="font-extrabold "><button className="underline underline-offset-2" onClick={()=>setScrollTo('contact')}>contact</button></span> me or connect with me on <a href="https://www.linkedin.com/in/christopher-ho-ken-wong/" className="underline underline-offset-3 font-extrabold text-purple-700 hover:text-purple-800">Linkedin</a>!
+                                        I am eager to connect for <span className="font-extrabold">Job</span> opportunities, where I can contribute, collaborate, and learn. If you are interested or have any opportunities that align with my skillset, feel free to <span className="font-extrabold "><button className="underline underline-offset-2 hover:text-purple-700" onClick={()=>setScrollTo('contact')}>contact</button></span> me or connect with me on <a href="https://www.linkedin.com/in/christopher-ho-ken-wong/" className="underline underline-offset-3 font-extrabold text-slate-600 hover:text-purple-700">Linkedin</a>!
                                     </div>
                                 </div>
                             </div>
@@ -229,8 +231,7 @@ function Home({scrollTo, setScrollTo}){
                 </div>
             </div>
         </div>
-      );
-      
+      );      
 }
 
 export default Home
