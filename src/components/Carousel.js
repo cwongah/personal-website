@@ -14,8 +14,6 @@ function Carousel({slides}){
         autoplaySpeed: 3000
     }
 
-    console.log(slides)
-
     return(
         <div className=" w-[43vw] bg-black bg-opacity-20 rounded-2xl p-10 mt-10" >
             <Slider {...settings}>
